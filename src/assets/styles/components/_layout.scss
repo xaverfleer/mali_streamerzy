@@ -1,0 +1,14 @@
+.site-wrapper {
+    background-color: $main-color;
+    color: #ffffff;
+    position: relative;
+
+    .page-body {
+        min-height: calc(100vh - #{$header-height});
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        visibility: visible;
+    }
+}
