@@ -9,7 +9,6 @@
 
 // Pages
 
-
 .page-body {
     background-color: $main-color;
     position: relative;
@@ -22,10 +21,10 @@
         height: 100%;
         left: 0;
         top: 0;
-        background: url("../images/left_background.png");
-        background-size: cover;
+        background: url("../images/left_background.svg");
+        background-size: contain;
         background-repeat: no-repeat;
-        background-position-x: right;
+        background-position-x: left;
     }
 
     &:after {
@@ -36,9 +35,10 @@
         height: 100%;
         right: 0;
         top: 0;
-        background: url("../images/right_background(1).png");
-        background-size: cover;
+        background: url("../images/right_background.svg");
+        background-size: contain;
         background-repeat: no-repeat;
+        background-position-x: right;
     }
 }
 
