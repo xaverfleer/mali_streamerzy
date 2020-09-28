@@ -29,13 +29,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
           {
-            family: `Rubik`,
-            variants: [`400`, `500`, `700`],
-            subsets: [`latin-ext`],
+            family: "Rubik",
+            variable: true,
+            weights: [`400`, `500`, `700`],
           },
         ],
       },
