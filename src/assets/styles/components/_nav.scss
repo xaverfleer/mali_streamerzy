@@ -206,3 +206,16 @@
         color: #5A3B5D;
     }
 }
+
+.footer,
+.push {
+    height: $footer-height;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    background-color: $dark-blue;
+    color: #fff;
+    font-size: 0.9375em;
+}
