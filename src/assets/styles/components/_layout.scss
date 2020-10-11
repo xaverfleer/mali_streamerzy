@@ -13,3 +13,7 @@
         visibility: visible;
     }
 }
+
+.splash-screen {
+    height: calc(100vh - #{$header-height};
+}

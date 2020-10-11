@@ -1,0 +1,25 @@
+.btn {
+  border-radius: 1.8rem;
+  border: 0;
+  border: 2px solid transparent;
+  color: #fff;
+  font-weight: 700;
+  padding: .7rem 2.3rem;
+  margin: 0 .5rem;
+}
+
+.btn:hover{
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: 
+    linear-gradient(117deg, $primary-gradient-start 0%, $primary-gradient-end 100%) padding-box,
+    linear-gradient(117deg, $primary-gradient-start 0%, $primary-gradient-end 100%) border-box;
+}
+
+.btn-outline-primary {
+  background: 
+    linear-gradient($background-color, $background-color) padding-box,
+    linear-gradient(117deg, $primary-gradient-start 0%, $primary-gradient-end 100%) border-box;
+}
