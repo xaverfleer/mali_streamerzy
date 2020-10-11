@@ -13,7 +13,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import '../assets/styles/styles.scss';
 
-function Layout({children}) {
+function Layout({children, pageClassName}) {
     const data = useStaticQuery(graphql`
         query SiteTitleQuery {
             site {
@@ -31,9 +31,7 @@ function Layout({children}) {
                     siteTitle={data.site.siteMetadata.title}
                 />
                 <div className='page-body'>
-                    <div className="container">
-                        <main>{children}</main>
-                    </div>
+                    <main className={pageClassName}>{children}</main>
                 </div>
                 <div className="push" />
             </div>

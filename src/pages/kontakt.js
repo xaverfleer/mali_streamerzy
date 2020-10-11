@@ -17,7 +17,7 @@ function ContactPage(props) {
     `);
 
     return <Layout>
-        <div className="splash-screen d-flex align-items-center">
+        <div className="splash-screen d-flex align-items-center container">
             <div className="row w-100">
                 <div className="col">
                     <h1>MASZ JESZCZE JAKIEŚ PYTANIA?</h1>
@@ -32,7 +32,7 @@ function ContactPage(props) {
                 </div>
             </div>
         </div>
-        <div className="splash-screen d-flex align-items-center">
+        <div className="splash-screen d-flex align-items-center container">
             <div className="w-100">
                 <h2 className="text-center mb-5">MASZ PYTANIE? <b>SKONTAKTUJ SIĘ Z NAMI</b></h2>
                 <form>

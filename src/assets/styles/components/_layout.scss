@@ -17,3 +17,16 @@
 .splash-screen {
     height: calc(100vh - #{$header-height};
 }
+
+.content-separator {
+    width: 100%;
+    height: 1px;
+    background: $content-separator-background;
+    margin: 1rem 0;
+}
+
+.dark-blue-section {
+    margin: 0 auto;
+    background: $dark-blue;
+    padding: 4rem 0;
+}
