@@ -2,7 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import {useStaticQuery} from 'gatsby';
 
-function Footer({footerLogo}) {
+function Footer() {
 
   const data = useStaticQuery(graphql`
     query{
