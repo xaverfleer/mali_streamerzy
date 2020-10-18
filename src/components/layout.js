@@ -31,9 +31,7 @@ function Layout({children}) {
                     siteTitle={data.site.siteMetadata.title}
                 />
                 <div className='page-body'>
-                    <div className="container">
-                        <main>{children}</main>
-                    </div>
+                    <main>{children}</main>
                 </div>
                 <div className="push" />
             </div>
