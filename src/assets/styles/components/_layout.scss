@@ -1,5 +1,4 @@
 .site-wrapper {
-    background-color: $main-color;
     color: #ffffff;
     min-height: 100vh;
     margin-bottom: -#{$footer-height};
@@ -15,7 +14,11 @@
 }
 
 .splash-screen {
-    height: calc(100vh - #{$header-height};
+    height: calc(100vh - #{$header-height});
+
+    &--bg {
+        background-color: $background-color;
+    }
 }
 
 .content-separator {
