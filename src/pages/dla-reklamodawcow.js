@@ -1,14 +1,52 @@
 import React from 'react';
+import Img from 'gatsby-image';
+import { graphql, useStaticQuery } from 'gatsby';
+
 import Layout from "../components/layout";
 
-import megaphone from '../assets/images/megaphone.svg';
-import group_of_viewers from '../assets/images/group_of_viewers.svg';
-import game_screen1 from '../assets/images/game_screen1.png';
-import game_screen2 from '../assets/images/game_screen2.png';
-import game_screen3 from '../assets/images/game_screen3.png';
 import WhyInvestingIsWorth from '../components/RepeatableSections/WhyInvestingIsWorth';
 
 function ForAdvertisersPage() {
+    const data = useStaticQuery(graphql`
+      query{
+        megaphone: file(relativePath: { eq: "megaphone.png" }) {
+          childImageSharp {
+              fluid(quality: 90, maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+              }
+          }
+        },
+        group_of_viewers: file(relativePath: { eq: "group_of_viewers.png" }) {
+          childImageSharp {
+              fluid(quality: 90, maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+              }
+          }
+        },
+        game_screen1: file(relativePath: { eq: "game_screen1.png" }) {
+          childImageSharp {
+              fluid(quality: 90, maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+              }
+          }
+        },
+        game_screen2: file(relativePath: { eq: "game_screen2.png" }) {
+          childImageSharp {
+              fluid(quality: 90, maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+              }
+          }
+        },
+        game_screen3: file(relativePath: { eq: "game_screen3.png" }) {
+          childImageSharp {
+              fluid(quality: 90, maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+              }
+          }
+        },
+      }
+    `);
+
     return <Layout pageClassName="dla-reklamodawcow">
         <div className="splash-screen d-flex align-items-center">
             <div className="container">
@@ -25,7 +63,7 @@ function ForAdvertisersPage() {
                         </div>
                     </div>
                     <div className="col-12 col-md-6 mt-4 mt-md-0">
-                        <img className="w-100" src={megaphone} alt="przemyślany system reklam"/>
+                        <Img fluid={data.megaphone.childImageSharp.fluid} alt="przemyślany system reklam" placeholderStyle={{ visibility: "hidden" }} />
                     </div>
                 </div>
             </div>
@@ -38,7 +76,8 @@ function ForAdvertisersPage() {
                     <p className="mb-0">Każdy z naszych streamerów posiada zaprogramowaną przestrzeń reklamową zsynchronizowaną ze sobą. Dzięki czemu Twoja reklama <span className="font-weight-bold">wyświetla się na wszystkich streamach jednocześnie.</span></p>
                 </div>
                 <div className="col-12 col-md-6 mt-4 mt-md-0">
-                    <img className="w-100" src={group_of_viewers} alt="przemyślany system reklam"/>
+                    <Img fluid={data.group_of_viewers.childImageSharp.fluid} alt="jednorodna reklama na wszystkich streamach" />
+                    {/*<img className="w-100" src={group_of_viewers} alt="przemyślany system reklam"/>*/}
                 </div>
             </div>
         </div>
@@ -49,7 +88,7 @@ function ForAdvertisersPage() {
                     <p>Podczas rozgrywki każdy streamer ma wydzieloną przestrzeń na której co jakiś czas wyświetla się Twoja reklama.</p>
                 </div>
                 <div className="col-12 col-md-6 mt-md-0">
-                    <img src={game_screen1} alt="czasowa reklama podczas gry"/>
+                    <Img fluid={data.game_screen1.childImageSharp.fluid} alt="czasowa reklama podczas gry" />
                 </div>
             </div>
         </div>
@@ -60,7 +99,7 @@ function ForAdvertisersPage() {
                     <p>Za każdym razem kiedy nasz streamer rozmawia z czatem ma stałe miejsce na Twoją reklamę.</p>
                 </div>
                 <div className="col-12 col-md-6 mt-md-0">
-                    <img src={game_screen2} alt="stała reklama na scenach rozmów"/>
+                    <Img fluid={data.game_screen2.childImageSharp.fluid} alt="stała reklama na scenach rozmów" />
                 </div>
             </div>
         </div>
@@ -71,7 +110,7 @@ function ForAdvertisersPage() {
                     <p>Każdy streamer ma możliwość zamieszczenia reklamy pod streamem, dzięki czemu grafika może wyświetlać się <span className="font-weight-bold">nawet gdy aktualnie nie streamuje.</span></p>
                 </div>
                 <div className="col-12 col-md-6 mt-4 mt-md-0">
-                    <img src={game_screen3} alt="czasowa reklama pod streamem"/>
+                    <Img fluid={data.game_screen3.childImageSharp.fluid} alt="stała reklama pod streamem" />
                 </div>
             </div>
         </div>

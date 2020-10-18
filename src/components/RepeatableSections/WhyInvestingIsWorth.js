@@ -7,8 +7,8 @@ import group_of_viewers_small from '../../assets/images/group_of_viewers_small.s
 
 function WhyInvestingIsWorth() {
     return <div className="dark-blue-section">
-        <div className="container text-center">
-            <h2>DLACZEGO <span className="font-weight-bold">WARTO INWESTOWAĆ W NASZE</span> MAŁE SPOŁECZNOŚCI</h2>
+        <div className="why-investing-is-worth container text-center">
+            <h2 className="mb-5">DLACZEGO <span className="font-weight-bold">WARTO INWESTOWAĆ W NASZE</span> MAŁE SPOŁECZNOŚCI</h2>
             <div className="row my-5">
                 <WhyInvestingIsWorthPoint
                     imgSrc={handshake}
@@ -48,9 +48,9 @@ function WhyInvestingIsWorth() {
 }
 
 function WhyInvestingIsWorthPoint({ imgSrc, imgAlt, title, description }) {
-    return <div className="col-12 col-md-6 col-lg-3">
-        <img className="mb-3" src={imgSrc} alt={imgAlt} />
-        <h4 className="mb-3 font-weight-bold">{title}</h4>
+    return <div className="why-investing-is-worth-point col-12 col-md-6 col-lg-3">
+        <img className="mb-4" src={imgSrc} alt={imgAlt} />
+        <h4 className="why-investing-is-worth-point-title mb-3 font-weight-bold">{title}</h4>
         <p>{description}</p>
     </div>
 }
